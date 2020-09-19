@@ -145,7 +145,7 @@ script = ExtResource( 6 )
 player = ExtResource( 2 )
 map_piece = ExtResource( 3 )
 end_flag = ExtResource( 8 )
-level_name = "This is a test"
+level_name = "Back"
 level_direction = "Forward"
 
 [node name="TileMap" type="TileMap" parent="."]

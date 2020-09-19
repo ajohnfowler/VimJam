@@ -10,7 +10,6 @@ var been_to_back = false
 
 func CollectedMap(piece):
 	collected_maps.append(piece)
-	SceneManager.goto_scene("res://scenes/Map.tscn")
 
 func PickedUpAbility(ability):
 	if not abilities.has(ability):

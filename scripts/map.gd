@@ -12,6 +12,7 @@ func BuildMap():
 		add_child(point)
 		point.position = node.position
 		point.id = node.id
+		point.get_node("Label").set_text(node.level.capitalize())
 		if node.next_node != null:
 			point.get_node("Line").set_points([Vector2.ZERO, node.next_node.position-node.position])
 
