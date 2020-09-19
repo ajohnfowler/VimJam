@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "map_tile",
 "language": "GDScript",
-"path": "res://scripts/map_tile.gd"
+"path": "res://scripts/map_point.gd"
 }, {
 "base": "Control",
 "class": "menu",
