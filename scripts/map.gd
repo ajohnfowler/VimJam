@@ -11,6 +11,7 @@ func BuildMap():
 		var point = map_point.instance()
 		add_child(point)
 		point.position = node.position
+		point.id = node.id
 		if node.next_node != null:
 			point.get_node("Line").set_points([Vector2.ZERO, node.next_node.position-node.position])
 

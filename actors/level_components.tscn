@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://actors/gui/pause.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/player.tscn" type="PackedScene" id=2]
+
+[node name="level_components" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 432, 198 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="pause" parent="GUI" instance=ExtResource( 1 )]
