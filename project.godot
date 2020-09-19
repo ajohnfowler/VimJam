@@ -9,10 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "ability_pickup",
+"language": "GDScript",
+"path": "res://scripts/ability_pickup.gd"
+}, {
+"base": "Area2D",
+"class": "map_pickup",
+"language": "GDScript",
+"path": "res://scripts/map_pickup.gd"
+}, {
+"base": "Area2D",
+"class": "map_tile",
+"language": "GDScript",
+"path": "res://scripts/map_tile.gd"
+}, {
 "base": "Control",
 "class": "menu",
 "language": "GDScript",
-"path": "res://scripts/gui/menu.gd"
+"path": "res://scripts/menu.gd"
 }, {
 "base": "Control",
 "class": "pause",
@@ -35,6 +50,9 @@ _global_script_classes=[ {
 "path": "res://scripts/globals/scene_manager.gd"
 } ]
 _global_script_class_icons={
+"ability_pickup": "",
+"map_pickup": "",
+"map_tile": "",
 "menu": "",
 "pause": "",
 "player": "",
@@ -52,6 +70,7 @@ config/icon="res://sprites/icon.png"
 
 SceneManager="*res://scripts/globals/scene_manager.gd"
 PlayerVariables="*res://scripts/globals/player_variables.gd"
+MapGenerator="*res://scripts/globals/map_generator.gd"
 
 [display]
 
