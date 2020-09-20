@@ -1,4 +1,5 @@
 extends Node
+class_name map_generator
 
 var map_nodes = []
 var map_sections = []

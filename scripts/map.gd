@@ -1,4 +1,5 @@
 extends Node
+class_name map
 
 export (PackedScene) var map_point
 

@@ -24,6 +24,26 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/end_flag.gd"
 }, {
+"base": "Node2D",
+"class": "level",
+"language": "GDScript",
+"path": "res://scripts/level.gd"
+}, {
+"base": "Panel",
+"class": "level_name_panel",
+"language": "GDScript",
+"path": "res://scripts/gui/name_panel.gd"
+}, {
+"base": "Node",
+"class": "map",
+"language": "GDScript",
+"path": "res://scripts/map.gd"
+}, {
+"base": "Node",
+"class": "map_generator",
+"language": "GDScript",
+"path": "res://scripts/globals/map_generator.gd"
+}, {
 "base": "Area2D",
 "class": "map_pickup",
 "language": "GDScript",
@@ -63,11 +83,20 @@ _global_script_classes=[ {
 "class": "spikes",
 "language": "GDScript",
 "path": "res://scripts/spikes.gd"
+}, {
+"base": "Node2D",
+"class": "there",
+"language": "GDScript",
+"path": "res://scripts/there.gd"
 } ]
 _global_script_class_icons={
 "ability_pickup": "",
 "back": "",
 "end_flag": "",
+"level": "",
+"level_name_panel": "",
+"map": "",
+"map_generator": "",
 "map_pickup": "",
 "map_tile": "",
 "menu": "",
@@ -75,7 +104,8 @@ _global_script_class_icons={
 "player": "",
 "player_varaibles": "",
 "scene_manager": "",
-"spikes": ""
+"spikes": "",
+"there": ""
 }
 
 [application]

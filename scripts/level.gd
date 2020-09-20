@@ -1,4 +1,5 @@
 extends Node2D
+class_name level
 
 export(PackedScene) var player = preload("res://actors/player.tscn")
 export(PackedScene) var end_flag = preload("res://actors/end_flag.tscn")
