@@ -1,6 +1,7 @@
 extends Node
 class_name map_generator
-
+var there
+var back
 var map_nodes = []
 var map_sections = []
 var number_of_steps = 2
@@ -9,13 +10,11 @@ var max_node_gap
 class MapNode:
 	var id: int
 	var position: Vector2
-	var next_node: MapNode
 	var previous_node: MapNode
 	var level: String
 	var passed: bool
 
 func _ready():
-	max_node_gap = 1920/number_of_steps
 	randomize()
 	GenerateMap()
 
@@ -26,27 +25,52 @@ func GenerateMap():
 func MakePoints():
 	
 	# Make the There node
-	var there = MapNode.new()
-	there.position = Vector2(0,540) + Vector2(rand_range(100,200), rand_range(-300,300))
-	there.level = "back"
-	there.passed = false
-	there.id = map_nodes.size()
-	map_nodes.append(there)
-	
-	MakePoint(there, number_of_steps)
+	MakeBack()
+	MakeLevelNodes(back, number_of_steps)
+	MakeThere()
 
-func MakePoint(parent, step_number):
+func MakeBack():
+	back = MapNode.new()
+	back.position = Vector2.ZERO
+	back.level = "back"
+	back.passed = false
+	back.id = map_nodes.size()
+	map_nodes.append(back)
+
+func MakeLevelNodes(parent, step_number):
 	if step_number <= 0:
-		parent.level = "there"
 		return parent
 	
 	var node = MapNode.new()
-	node.position = parent.position + Vector2(rand_range(100,max_node_gap), rand_range(-300,300))
+	node.position = parent.position + Vector2(rand_range(100,200), rand_range(-300,300))
 
-	parent.next_node = node
+	node.previous_node = parent
 	# For testing all levels have the same number
 	node.level = 1 #rand_range(1,2)
 	node.id = map_nodes.size()
 	map_nodes.append(node)
-	MakePoint(node, step_number-1)
+	
+	# returns a random number between 1-3 for the number of forks of the node
+	var splits = randi()%3+1
+	match splits:
+		1:
+			MakeLevelNodes(node, step_number-1)
+		2:
+			MakeLevelNodes(node, step_number-1)
+			MakeLevelNodes(node, step_number-1)
+		3:
+			MakeLevelNodes(node, step_number-1)
+			MakeLevelNodes(node, step_number-1)
+			MakeLevelNodes(node, step_number-1)
+			
 	return
+
+func MakeThere():
+	there = MapNode.new()
+	# Add onto the end of the last node added
+	there.position = map_nodes[map_nodes.size()-1].position + Vector2(rand_range(100,200), rand_range(-300,300))
+	there.level = "there"
+	there.passed = false
+	there.id = map_nodes.size()
+	there.previous_node = map_nodes[map_nodes.size()-1]
+	map_nodes.append(there)
