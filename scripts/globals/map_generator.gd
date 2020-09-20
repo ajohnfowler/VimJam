@@ -2,7 +2,7 @@ extends Node
 
 var map_nodes = []
 var map_sections = []
-var number_of_steps = 4
+var number_of_steps = 2
 var max_node_gap
 
 class MapNode:
@@ -27,7 +27,7 @@ func MakePoints():
 	# Make the There node
 	var there = MapNode.new()
 	there.position = Vector2(0,540) + Vector2(rand_range(100,200), rand_range(-300,300))
-	there.level = "there"
+	there.level = "back"
 	there.passed = false
 	there.id = map_nodes.size()
 	map_nodes.append(there)
@@ -36,7 +36,7 @@ func MakePoints():
 
 func MakePoint(parent, step_number):
 	if step_number <= 0:
-		parent.level = "back"
+		parent.level = "there"
 		return parent
 	
 	var node = MapNode.new()

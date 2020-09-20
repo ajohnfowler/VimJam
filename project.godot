@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/ability_pickup.gd"
 }, {
+"base": "Node2D",
+"class": "back",
+"language": "GDScript",
+"path": "res://scripts/back.gd"
+}, {
 "base": "Area2D",
 "class": "end_flag",
 "language": "GDScript",
@@ -53,9 +58,15 @@ _global_script_classes=[ {
 "class": "scene_manager",
 "language": "GDScript",
 "path": "res://scripts/globals/scene_manager.gd"
+}, {
+"base": "Area2D",
+"class": "spikes",
+"language": "GDScript",
+"path": "res://scripts/spikes.gd"
 } ]
 _global_script_class_icons={
 "ability_pickup": "",
+"back": "",
 "end_flag": "",
 "map_pickup": "",
 "map_tile": "",
@@ -63,7 +74,8 @@ _global_script_class_icons={
 "pause": "",
 "player": "",
 "player_varaibles": "",
-"scene_manager": ""
+"scene_manager": "",
+"spikes": ""
 }
 
 [application]
