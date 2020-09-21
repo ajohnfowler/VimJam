@@ -9,6 +9,7 @@ var applied_gravity = gravity
 export var jump_force = 200
 var can_jump = false
 var jump_count
+var wall_detected
 
 var velocity = Vector2.ZERO
 
@@ -35,6 +36,9 @@ func _physics_process(delta):
 	# Add jump force when Jump is pressed
 	if Input.is_action_just_pressed("jump") and can_jump:
 		velocity.y = -jump_force
+		applied_gravity = gravity
+		if wall_detected == true:
+			velocity.x = -jump_force
 		#$JumpPoof.emitting = true
 		# Reduce the amount of jumps left by 1
 		jump_count -= 1
@@ -53,6 +57,7 @@ func reset_jump():
 func _on_wall_detection_body_entered(body):
 	if body.name != "player" and PlayerVariables.HasAbility("Wall Jump"):
 		# Code for wall jump
+		wall_detected = true
 		applied_gravity = 0
 		velocity.y = 0
 		reset_jump()
@@ -60,4 +65,5 @@ func _on_wall_detection_body_entered(body):
 func _on_wall_detection_body_exited(body):
 	if body.name != "player":
 		# Code for wall jump
+		wall_detected = false
 		applied_gravity = gravity
