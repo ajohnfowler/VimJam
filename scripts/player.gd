@@ -3,8 +3,9 @@ class_name player
 
 export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
-export var move_speed = 200
-export var gravity = 200
+export var move_speed = 400
+export var gravity = 1000
+var applied_gravity = gravity
 export var jump_force = 200
 var can_jump = false
 var jump_count
@@ -23,7 +24,7 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, 0, friction)
 
 	# Apply Gravity to player
-	velocity.y += gravity * delta
+	velocity.y += applied_gravity * delta
 
 	# Apply movement
 	velocity = move_and_slide(velocity, Vector2.UP)
@@ -42,9 +43,21 @@ func _physics_process(delta):
 
 func reset_jump():
 	# If player has double jump, can jump twice
-	if PlayerVariables.abilities.has("Double Jump"):
+	if PlayerVariables.collected_abilities.has("Double Jump"):
 		jump_count = 2
 	# Otherwise they can only jump once
 	else:
 		jump_count = 1
 	can_jump = true
+
+func _on_wall_detection_body_entered(body):
+	print (body.name)
+	if body.name != "player":
+		# Code for wall jump
+		applied_gravity = 0
+		velocity.y = 0
+
+func _on_wall_detection_body_exited(body):
+	if body.name != "player":
+		# Code for wall jump
+		applied_gravity = gravity
