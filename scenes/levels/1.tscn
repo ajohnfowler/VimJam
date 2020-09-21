@@ -158,6 +158,10 @@ position = Vector2( 69.148, 216.911 )
 position = Vector2( 304.889, 218.878 )
 ability_type = "Dash"
 
+[node name="ability_pickup3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 532.758, 204.907 )
+ability_type = "Dash"
+
 [node name="start" type="Position2D" parent="."]
 position = Vector2( -128, 128 )
 
