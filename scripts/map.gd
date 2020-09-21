@@ -11,6 +11,8 @@ func _ready():
 
 func BuildMap():
 	for node in MapGenerator.map_nodes:
+		# if the map node is not revealed yet. The node is not added
+		if (node.hidden): return
 		var point = map_point.instance()
 		add_child(point)
 		point.position = node.position
