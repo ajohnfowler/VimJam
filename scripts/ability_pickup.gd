@@ -1,7 +1,7 @@
 extends Area2D
 class_name ability_pickup
 
-export(String, "Double Jump", "Grapple", "Wall Jump") var ability_type
+export(String, "Double Jump", "Grapple", "Wall Jump", "Dash") var ability_type
 
 func _ready():
 	if PlayerVariables.HasAbility(ability_type):

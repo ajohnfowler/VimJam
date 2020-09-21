@@ -10,6 +10,7 @@ export var jump_force = 200
 var can_jump = false
 var jump_count
 var wall_detected
+var can_dash = false
 
 var velocity = Vector2.ZERO
 
@@ -32,6 +33,7 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		reset_jump()
+		reset_dash()
 	
 	# Add jump force when Jump is pressed
 	if Input.is_action_just_pressed("jump") and can_jump:
@@ -44,6 +46,11 @@ func _physics_process(delta):
 		jump_count -= 1
 		if jump_count <= 0:
 			can_jump = false
+	
+	#add dash force when dash is pressed
+	if Input.is_action_just_pressed("dash") and can_dash:
+		velocity.x = +jump_force
+		
 
 func reset_jump():
 	# If player has double jump, can jump twice
@@ -53,6 +60,13 @@ func reset_jump():
 	else:
 		jump_count = 1
 	can_jump = true
+
+func reset_dash():
+	# if player has dash ability, it allows them to dash
+	if PlayerVariables.HasAbility("Dash"):
+		can_dash = true 
+	else:
+		pass
 
 func _on_wall_detection_body_entered(body):
 	if body.name != "player" and PlayerVariables.HasAbility("Wall Jump"):

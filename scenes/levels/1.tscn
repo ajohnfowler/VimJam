@@ -155,8 +155,8 @@ tile_data = PoolIntArray( -327694, 1, 0, -327693, 1, 1, -327692, 1, 1, -327691, 
 position = Vector2( 69.148, 216.911 )
 
 [node name="ability_pickup2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 287.962, 212.642 )
-ability_type = "Wall Jump"
+position = Vector2( 304.889, 218.878 )
+ability_type = "Dash"
 
 [node name="start" type="Position2D" parent="."]
 position = Vector2( -128, 128 )
