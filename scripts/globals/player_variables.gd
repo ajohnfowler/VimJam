@@ -19,6 +19,10 @@ func PickedUpAbility(ability):
 	if not collected_abilities.has(ability):
 		collected_abilities.append(ability)
 
+func HasAbility(ability_name):
+	var result = (collected_abilities.has(ability_name) or held_ability == ability_name)
+	return result
+
 func CompletedLevel():
 	collected_maps.append(held_map)
 	collected_abilities.append(held_ability)
