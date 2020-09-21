@@ -2,40 +2,74 @@
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 
-[node name="Menu" type="Control"]
+[node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 150.0
+margin_top = 150.0
+margin_right = -150.0
+margin_bottom = -150.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Play" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 135.0
+margin_bottom = 140.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 131.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_right = 131.0
+margin_bottom = 14.0
+text = "The Journey to There"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_options" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 131.0
+margin_bottom = 88.0
+size_flags_vertical = 3
+custom_constants/separation = 30
+
+[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer/menu_options"]
+margin_right = 131.0
+margin_bottom = 20.0
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -64.0
-margin_top = 30.0
-margin_right = 64.0
-margin_bottom = 62.0
+[node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer/menu_options"]
+margin_top = 50.0
+margin_right = 131.0
+margin_bottom = 70.0
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+
+[node name="Credits" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 131.0
+margin_bottom = 140.0
+text = "Made for VimJam:
+Adam Fowler
+Matthew Bolivar"
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+margin_left = 135.0
+margin_right = 135.0
+margin_bottom = 140.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/menu_options/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/menu_options/Quit" to="." method="_on_Quit_pressed"]
