@@ -10,9 +10,11 @@ func _ready():
 	PositionCamera()
 
 func BuildMap():
-	for node in MapGenerator.map_nodes:
+	for i in MapGenerator.map_nodes.size():
+		var node = MapGenerator.map_nodes[i]
 		# if the map node is not revealed yet. The node is not added
-		if (node.hidden): return
+		if i != 0:
+			if not node.previous_node.has_map: return
 		var point = map_point.instance()
 		add_child(point)
 		point.position = node.position

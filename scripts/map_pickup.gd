@@ -1,12 +1,14 @@
 extends Area2D
 class_name map_pickup
 
-export(int) var piece_number
+func _ready():
+	if MapGenerator.map_nodes[SceneManager.current_map_node].has_map:
+		queue_free()
 
 func _on_MapPiece_body_entered(body):
 	if (body.name == "player"):
+		PlayerVariables.FoundMap()
 		$Sprite.visible = false
-		$CollisionShape2D.disabled = true
 		$Poof.emitting = true
 		yield(get_tree().create_timer(0.5), "timeout")
-		PlayerVariables.CollectedMap(piece_number)
+		queue_free()

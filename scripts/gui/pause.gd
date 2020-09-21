@@ -28,6 +28,5 @@ func _on_Menu_pressed():
 func _on_Quit_pressed():
 	get_tree().quit()
 
-
-func _on_Map_pressed():	
+func _on_Map_pressed():
 	SceneManager.goto_scene("res://scenes/Map.tscn")

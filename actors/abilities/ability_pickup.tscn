@@ -13,6 +13,7 @@ script = ExtResource( 2 )
 ability_type = "Double Jump"
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 0.658551 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 

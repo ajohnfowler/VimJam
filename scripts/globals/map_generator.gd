@@ -1,19 +1,14 @@
 extends Node
 class_name map_generator
-var there
-var back
 var map_nodes = []
-var map_sections = []
 var number_of_steps = 2
-var max_node_gap
 
 class MapNode:
 	var id: int
 	var position: Vector2
 	var previous_node: MapNode
-	var hidden: bool
+	var has_map: bool
 	var level: String
-	var completed: bool
 
 func _ready():
 	randomize()
@@ -24,18 +19,16 @@ func GenerateMap():
 
 # Recusively create points from the starting point to end
 func MakePoints():
-	
 	# Make the There node
 	MakeBack()
-	MakeLevelNodes(back, number_of_steps)
+	MakeLevelNodes(map_nodes[0], number_of_steps)
 	MakeThere()
 
 func MakeBack():
-	back = MapNode.new()
+	var back = MapNode.new()
 	back.position = Vector2.ZERO
 	back.level = "back"
-	back.completed = false
-	back.hidden = false
+	back.has_map = false
 	back.id = map_nodes.size()
 	map_nodes.append(back)
 
@@ -49,7 +42,7 @@ func MakeLevelNodes(parent, step_number):
 	node.previous_node = parent
 	# For testing all levels have the same number
 	node.level = 1 #rand_range(1,2)
-	node.hidden = true
+	node.has_map = false
 	node.id = map_nodes.size()
 	map_nodes.append(node)
 	
@@ -69,12 +62,11 @@ func MakeLevelNodes(parent, step_number):
 	return
 
 func MakeThere():
-	there = MapNode.new()
+	var there = MapNode.new()
 	# Add onto the end of the last node added
 	there.position = map_nodes[map_nodes.size()-1].position + Vector2(rand_range(100,200), rand_range(-300,300))
 	there.level = "there"
-	there.completed = false
-	there.hidden = true
+	there.has_map = false
 	there.id = map_nodes.size()
 	there.previous_node = map_nodes[map_nodes.size()-1]
 	map_nodes.append(there)
