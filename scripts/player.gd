@@ -7,6 +7,7 @@ export var move_speed = 400
 export var gravity = 1000
 var applied_gravity = gravity
 export var jump_force = 200
+export var dash_force = 200
 var can_jump = false
 var jump_count
 var wall_detected
@@ -49,7 +50,7 @@ func _physics_process(delta):
 	
 	#add dash force when dash is pressed
 	if Input.is_action_just_pressed("dash") and can_dash:
-		velocity.x = +jump_force
+		velocity.x = +dash_force
 		
 
 func reset_jump():
