@@ -56,6 +56,7 @@ func _on_wall_detection_body_entered(body):
 		# Code for wall jump
 		applied_gravity = 0
 		velocity.y = 0
+		reset_jump()
 
 func _on_wall_detection_body_exited(body):
 	if body.name != "player":
