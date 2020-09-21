@@ -43,7 +43,7 @@ func _physics_process(delta):
 
 func reset_jump():
 	# If player has double jump, can jump twice
-	if PlayerVariables.collected_abilities.has("Double Jump"):
+	if PlayerVariables.HasAbility("Double Jump"):
 		jump_count = 2
 	# Otherwise they can only jump once
 	else:
@@ -51,8 +51,7 @@ func reset_jump():
 	can_jump = true
 
 func _on_wall_detection_body_entered(body):
-	print (body.name)
-	if body.name != "player":
+	if body.name != "player" and PlayerVariables.HasAbility("Wall Jump"):
 		# Code for wall jump
 		applied_gravity = 0
 		velocity.y = 0

@@ -1,10 +1,10 @@
 extends Area2D
 class_name ability_pickup
 
-export(String, "Double Jump", "Grapple") var ability_type
+export(String, "Double Jump", "Grapple", "Wall Jump") var ability_type
 
 func _ready():
-	if PlayerVariables.abilities.has(ability_type):
+	if PlayerVariables.HasAbility(ability_type):
 		queue_free()
 
 func _on_ability_pickup_body_entered(body):
