@@ -12,6 +12,7 @@ script = ExtResource( 2 )
 [node name="Line" type="Line2D" parent="."]
 z_index = -1
 points = PoolVector2Array( 0, 0, 0, 0 )
+width = 4.0
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

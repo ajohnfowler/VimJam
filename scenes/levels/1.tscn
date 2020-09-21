@@ -171,13 +171,4 @@ shape = SubResource( 12 )
 
 [node name="Sprite" type="Sprite" parent="spikes"]
 texture = ExtResource( 9 )
-
-[node name="spikes2" type="Area2D" parent="."]
-position = Vector2( 168, 248 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes2"]
-shape = SubResource( 12 )
-
-[node name="Sprite" type="Sprite" parent="spikes2"]
-texture = ExtResource( 9 )
 [connection signal="body_entered" from="spikes" to="spikes" method="_on_spikes_body_entered"]

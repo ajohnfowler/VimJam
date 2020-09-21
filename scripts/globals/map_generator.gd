@@ -11,8 +11,9 @@ class MapNode:
 	var id: int
 	var position: Vector2
 	var previous_node: MapNode
+	var hidden: bool
 	var level: String
-	var passed: bool
+	var completed: bool
 
 func _ready():
 	randomize()
@@ -33,7 +34,8 @@ func MakeBack():
 	back = MapNode.new()
 	back.position = Vector2.ZERO
 	back.level = "back"
-	back.passed = false
+	back.completed = false
+	back.hidden = false
 	back.id = map_nodes.size()
 	map_nodes.append(back)
 
@@ -47,6 +49,7 @@ func MakeLevelNodes(parent, step_number):
 	node.previous_node = parent
 	# For testing all levels have the same number
 	node.level = 1 #rand_range(1,2)
+	node.hidden = true
 	node.id = map_nodes.size()
 	map_nodes.append(node)
 	
@@ -70,7 +73,8 @@ func MakeThere():
 	# Add onto the end of the last node added
 	there.position = map_nodes[map_nodes.size()-1].position + Vector2(rand_range(100,200), rand_range(-300,300))
 	there.level = "there"
-	there.passed = false
+	there.completed = false
+	there.hidden = true
 	there.id = map_nodes.size()
 	there.previous_node = map_nodes[map_nodes.size()-1]
 	map_nodes.append(there)

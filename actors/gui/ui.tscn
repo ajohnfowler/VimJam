@@ -5,8 +5,6 @@
 
 [node name="ui" type="CanvasLayer"]
 
-[node name="pause" parent="." instance=ExtResource( 3 )]
-
 [node name="name_panel" type="Panel" parent="."]
 modulate = Color( 1, 1, 1, 0.784314 )
 anchor_left = 0.5
@@ -41,4 +39,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="pause" parent="." instance=ExtResource( 3 )]
 [connection signal="timeout" from="name_panel/Timer" to="name_panel" method="_on_Timer_timeout"]

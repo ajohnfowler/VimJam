@@ -24,7 +24,10 @@ func _on_Resume_pressed():
 
 func _on_Menu_pressed():
 	SceneManager.goto_scene("res://scenes/Menu.tscn")
-	pass # Replace with function body.
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_Map_pressed():	
+	SceneManager.goto_scene("res://scenes/Map.tscn")
