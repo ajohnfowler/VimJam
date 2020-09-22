@@ -7,6 +7,7 @@ export var move_speed = 400
 export var gravity = 1000
 var applied_gravity = gravity
 export var jump_force = 200
+export var wall_jump_force = 2000
 export var dash_force = 200
 var can_jump = false
 var jump_count
@@ -20,16 +21,18 @@ func _physics_process(delta):
 	# Left and Right movement
 	var direction = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 
+	$wall_detection.scale.x = direction
+
 	# Using lerp a smooth start and stop to player movement
 	if direction != 0:
 		velocity.x = lerp(velocity.x, direction * move_speed, acceleration)
-		# Play the run animation since the move keys are pressed
+		# Play the walking animation since the move keys are pressed
 		$Sprite.set_flip_h(direction < 0)
-		$Sprite.play("run")
+		$AnimationPlayer.play("Walking")
 	else:
 		velocity.x = lerp(velocity.x, 0, friction)
 		# Play the idle animation since the no move keys are pressed
-		$Sprite.play("idle")
+		$AnimationPlayer.play("Idle")
 
 	# Apply Gravity to player
 	velocity.y += applied_gravity * delta
@@ -40,13 +43,15 @@ func _physics_process(delta):
 	if is_on_floor():
 		reset_jump()
 		reset_dash()
+	else:
+		$AnimationPlayer.play("Jump")
 	
 	# Add jump force when Jump is pressed
 	if Input.is_action_just_pressed("jump") and can_jump:
 		velocity.y = -jump_force
 		applied_gravity = gravity
 		if wall_detected == true:
-			velocity.x = -jump_force
+			velocity.x = wall_jump_force * -direction
 		#$JumpPoof.emitting = true
 		# Reduce the amount of jumps left by 1
 		jump_count -= 1
