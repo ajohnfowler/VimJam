@@ -79,7 +79,7 @@ tracks/1/keys = {
 script = ExtResource( 2 )
 gravity = 1200
 jump_force = 600
-dash_force = 1000
+dash_force = 2000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -32 )

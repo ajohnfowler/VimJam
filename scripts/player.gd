@@ -13,6 +13,7 @@ var can_jump = false
 var jump_count
 var wall_detected
 var can_dash = false
+var dash_count
 
 var velocity = Vector2.ZERO
 
@@ -60,7 +61,11 @@ func _physics_process(delta):
 	
 	#add dash force when dash is pressed
 	if Input.is_action_just_pressed("dash") and can_dash:
-		velocity.x = dash_force * direction
+		if dash_count <= 0:
+			can_jump = false
+		else:
+			dash_count -= 1
+			velocity.x = dash_force * direction
 		
 
 func reset_jump():
@@ -75,6 +80,7 @@ func reset_jump():
 func reset_dash():
 	# if player has dash ability, it allows them to dash
 	if PlayerVariables.HasAbility("Dash"):
+		dash_count = 1
 		can_dash = true 
 	else:
 		pass
