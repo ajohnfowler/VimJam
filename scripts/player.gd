@@ -14,6 +14,7 @@ var jump_count
 var wall_detected
 var can_dash = false
 var dash_count
+var can_flux = false
 
 var velocity = Vector2.ZERO
 
@@ -47,6 +48,18 @@ func _physics_process(delta):
 	else:
 		$AnimationPlayer.play("Jump")
 	
+	#checks to reset jumps if the person has inverted gravity on
+	if is_on_ceiling() and gravity <= 0: 
+		reset_jump()
+		reset_dash()
+	
+	
+	#checks to see if player has the flux ability
+	if PlayerVariables.HasAbility("flux"):
+		can_flux = true
+	else:
+		can_flux = false
+	
 	# Add jump force when Jump is pressed
 	if Input.is_action_just_pressed("jump") and can_jump:
 		velocity.y = -jump_force
@@ -67,6 +80,14 @@ func _physics_process(delta):
 			dash_count -= 1
 			velocity.x = dash_force * direction
 		
+	#add the ability to invert gravity
+	if Input. is_action_just_pressed("flux") and can_flux:
+		gravity = gravity * -1
+		jump_force = jump_force * -1
+		applied_gravity = gravity 
+		$Sprite.set_flip_v(direction > 0)
+	else:
+		pass
 
 func reset_jump():
 	# If player has double jump, can jump twice
