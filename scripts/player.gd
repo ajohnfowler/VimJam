@@ -23,8 +23,13 @@ func _physics_process(delta):
 	# Using lerp a smooth start and stop to player movement
 	if direction != 0:
 		velocity.x = lerp(velocity.x, direction * move_speed, acceleration)
+		# Play the run animation since the move keys are pressed
+		$Sprite.set_flip_h(direction < 0)
+		$Sprite.play("run")
 	else:
 		velocity.x = lerp(velocity.x, 0, friction)
+		# Play the idle animation since the no move keys are pressed
+		$Sprite.play("idle")
 
 	# Apply Gravity to player
 	velocity.y += applied_gravity * delta
@@ -50,7 +55,7 @@ func _physics_process(delta):
 	
 	#add dash force when dash is pressed
 	if Input.is_action_just_pressed("dash") and can_dash:
-		velocity.x = +dash_force
+		velocity.x = dash_force * direction
 		
 
 func reset_jump():
