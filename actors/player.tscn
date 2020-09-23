@@ -120,7 +120,6 @@ shape = SubResource( 2 )
 position = Vector2( 4, -32 )
 texture = ExtResource( 1 )
 hframes = 12
-frame = 9
 region_rect = Rect2( 64, 0, 64, 64 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
