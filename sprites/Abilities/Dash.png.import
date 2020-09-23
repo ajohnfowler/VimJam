@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AbilityIcons.png-7419b62fc66481071de5a07fe58088f9.stex"
+path="res://.import/Dash.png-deb01e4b229e2ebb8a4a2293fc4ddcd5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/AbilityIcons.png"
-dest_files=[ "res://.import/AbilityIcons.png-7419b62fc66481071de5a07fe58088f9.stex" ]
+source_file="res://sprites/Abilities/Dash.png"
+dest_files=[ "res://.import/Dash.png-deb01e4b229e2ebb8a4a2293fc4ddcd5.stex" ]
 
 [params]
 

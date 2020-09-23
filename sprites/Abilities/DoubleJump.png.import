@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AbilityIcons.png-7419b62fc66481071de5a07fe58088f9.stex"
+path="res://.import/DoubleJump.png-d8a0c9f6b309911649436cf7fa0aa93e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/AbilityIcons.png"
-dest_files=[ "res://.import/AbilityIcons.png-7419b62fc66481071de5a07fe58088f9.stex" ]
+source_file="res://sprites/Abilities/DoubleJump.png"
+dest_files=[ "res://.import/DoubleJump.png-d8a0c9f6b309911649436cf7fa0aa93e.stex" ]
 
 [params]
 

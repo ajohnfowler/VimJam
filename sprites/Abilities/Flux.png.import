@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AbilityIcons.png-7419b62fc66481071de5a07fe58088f9.stex"
+path="res://.import/Flux.png-9e0107fbf64dd1c67b3b33331e303cc7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/AbilityIcons.png"
-dest_files=[ "res://.import/AbilityIcons.png-7419b62fc66481071de5a07fe58088f9.stex" ]
+source_file="res://sprites/Abilities/Flux.png"
+dest_files=[ "res://.import/Flux.png-9e0107fbf64dd1c67b3b33331e303cc7.stex" ]
 
 [params]
 
