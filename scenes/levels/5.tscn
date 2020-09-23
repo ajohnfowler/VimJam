@@ -136,20 +136,6 @@ shape = SubResource( 1 )
 scale = Vector2( 1.32, 1 )
 texture = ExtResource( 9 )
 
-[node name="spikes25" type="Area2D" parent="."]
-position = Vector2( 845.294, 691.811 )
-rotation = 1.5786
-scale = Vector2( 9.34892, 2.53152 )
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes25"]
-scale = Vector2( 1.18373, 1 )
-shape = SubResource( 12 )
-
-[node name="Sprite" type="Sprite" parent="spikes25"]
-scale = Vector2( 1.32, 1 )
-texture = ExtResource( 9 )
-
 [node name="spikes9" type="Area2D" parent="."]
 position = Vector2( 628.341, 469.446 )
 rotation = -1.5668
@@ -248,34 +234,6 @@ shape = SubResource( 1 )
 scale = Vector2( 1.32, 1 )
 texture = ExtResource( 9 )
 
-[node name="spikes23" type="Area2D" parent="."]
-position = Vector2( 844.777, 204.321 )
-rotation = 1.57307
-scale = Vector2( 13.4689, 2.53152 )
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes23"]
-scale = Vector2( 1.18373, 1 )
-shape = SubResource( 12 )
-
-[node name="Sprite" type="Sprite" parent="spikes23"]
-scale = Vector2( 1.32, 1 )
-texture = ExtResource( 9 )
-
-[node name="spikes24" type="Area2D" parent="."]
-position = Vector2( 844.777, 477.839 )
-rotation = 1.57307
-scale = Vector2( 13.4689, 2.53152 )
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes24"]
-scale = Vector2( 1.18373, 1 )
-shape = SubResource( 12 )
-
-[node name="Sprite" type="Sprite" parent="spikes24"]
-scale = Vector2( 1.32, 1 )
-texture = ExtResource( 9 )
-
 [node name="spikes8" type="Area2D" parent="."]
 position = Vector2( 513.919, 628.366 )
 scale = Vector2( 13.1889, 2.53152 )
@@ -345,20 +303,6 @@ shape = SubResource( 1 )
 scale = Vector2( 1.32, 1 )
 texture = ExtResource( 9 )
 
-[node name="spikes26" type="Area2D" parent="."]
-position = Vector2( 1375.5, 396.75 )
-rotation = 3.13685
-scale = Vector2( 9.10933, 2.53152 )
-script = ExtResource( 10 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes26"]
-scale = Vector2( 1.18373, 1 )
-shape = SubResource( 12 )
-
-[node name="Sprite" type="Sprite" parent="spikes26"]
-scale = Vector2( 1.32, 1 )
-texture = ExtResource( 9 )
-
 [node name="spikes15" type="Area2D" parent="."]
 position = Vector2( 1147.43, -495.021 )
 rotation = 3.13685
@@ -397,7 +341,6 @@ position = Vector2( -191.033, 211.25 )
 [connection signal="body_entered" from="spikes22" to="spikes22" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes7" to="spikes7" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes11" to="spikes11" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes25" to="spikes25" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes9" to="spikes9" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes10" to="spikes10" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes18" to="spikes18" method="_on_spikes_body_entered"]
@@ -405,13 +348,10 @@ position = Vector2( -191.033, 211.25 )
 [connection signal="body_entered" from="spikes20" to="spikes20" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes16" to="spikes16" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes17" to="spikes17" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes23" to="spikes23" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes24" to="spikes24" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes8" to="spikes8" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes4" to="spikes4" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes12" to="spikes12" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes13" to="spikes13" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes14" to="spikes14" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes26" to="spikes26" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes15" to="spikes15" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes5" to="spikes5" method="_on_spikes_body_entered"]
