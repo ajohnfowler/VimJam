@@ -1,6 +1,6 @@
 extends Control
 
-func _process(delta):
+func _process(_delta):
 	for child in $Panel/HBoxContainer.get_children():
 		if PlayerVariables.HasAbility(child.name):
 			child.visible = true
