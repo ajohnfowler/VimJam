@@ -20,4 +20,3 @@ func _ready():
 		
 	add_child(new_end_flag)
 	add_child(new_player)
-

@@ -28,7 +28,7 @@ ability_type = "flux"
 position = Vector2( -1299.73, 316.988 )
 
 [node name="end" type="Position2D" parent="."]
-position = Vector2( -164.285, -403.418 )
+position = Vector2( 1452.47, 768.492 )
 
 [node name="ui" parent="." instance=ExtResource( 7 )]
 

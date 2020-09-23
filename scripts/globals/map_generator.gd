@@ -1,7 +1,7 @@
 extends Node
 class_name map_generator
 var map_nodes = []
-var number_of_steps = 2
+var number_of_steps = 5
 
 class MapNode:
 	var id: int
@@ -24,6 +24,7 @@ func MakePoints():
 	MakeLevelNodes(map_nodes[0], number_of_steps)
 	MakeThere()
 
+
 func MakeBack():
 	var back = MapNode.new()
 	back.position = Vector2.ZERO
@@ -40,25 +41,28 @@ func MakeLevelNodes(parent, step_number):
 	node.position = parent.position + Vector2(rand_range(100,200), rand_range(-300,300))
 
 	node.previous_node = parent
-	# For testing all levels have the same number
-	node.level = 5 #rand_range(1,2)
+	# For now just cycle through all levels one after another
+	node.level = number_of_steps - step_number + 1 #rand_range(1,2)
 	node.has_map = false
 	node.id = map_nodes.size()
 	map_nodes.append(node)
 	
+	# For testing no splits
+	MakeLevelNodes(node, step_number-1)
+	
 	# returns a random number between 1-3 for the number of forks of the node
-	var splits = randi()%3+1
-	match splits:
-		1:
-			MakeLevelNodes(node, step_number-1)
-		2:
-			MakeLevelNodes(node, step_number-1)
-			MakeLevelNodes(node, step_number-1)
-		3:
-			MakeLevelNodes(node, step_number-1)
-			MakeLevelNodes(node, step_number-1)
-			MakeLevelNodes(node, step_number-1)
-			
+	#var splits = randi()%3+1
+	#match splits:
+	#	1:
+	#		MakeLevelNodes(node, step_number-1)
+	#	2:
+	#		MakeLevelNodes(node, step_number-1)
+	#		MakeLevelNodes(node, step_number-1)
+	#	3:
+	#		MakeLevelNodes(node, step_number-1)
+	#		MakeLevelNodes(node, step_number-1)
+	#		MakeLevelNodes(node, step_number-1)
+	#		
 	return
 
 func MakeThere():
