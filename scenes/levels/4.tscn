@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/Spikes.png" type="Texture" id=9]
 [ext_resource path="res://scripts/spikes.gd" type="Script" id=10]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.5135, 8 )
 
 [node name="1" type="Node2D"]
@@ -40,7 +40,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes"]
 scale = Vector2( 1.32, 1 )
@@ -54,7 +54,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes2"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes2"]
 scale = Vector2( 1.32, 1 )
@@ -68,7 +68,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes8"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes8"]
 scale = Vector2( 1.32, 1 )
@@ -82,7 +82,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes9"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes9"]
 scale = Vector2( 1.32, 1 )
@@ -96,7 +96,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes10"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes10"]
 scale = Vector2( 1.32, 1 )
@@ -110,7 +110,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes11"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes11"]
 scale = Vector2( 1.32, 1 )
@@ -124,7 +124,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes12"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes12"]
 scale = Vector2( 1.32, 1 )
@@ -138,7 +138,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes13"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes13"]
 scale = Vector2( 1.32, 1 )
@@ -152,7 +152,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes14"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes14"]
 scale = Vector2( 1.32, 1 )
@@ -166,7 +166,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes15"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes15"]
 scale = Vector2( 1.32, 1 )
@@ -180,7 +180,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes3"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes3"]
 scale = Vector2( 1.32, 1 )
@@ -194,7 +194,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes5"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes5"]
 scale = Vector2( 1.32, 1 )
@@ -208,7 +208,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes7"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes7"]
 scale = Vector2( 1.32, 1 )
@@ -222,7 +222,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes4"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes4"]
 scale = Vector2( 1.32, 1 )
@@ -236,7 +236,7 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes6"]
 scale = Vector2( 1.15387, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes6"]
 scale = Vector2( 1.32, 1 )
