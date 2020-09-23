@@ -25,7 +25,7 @@ position = Vector2( 69.148, 216.911 )
 
 [node name="ability_pickup2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 304.889, 218.878 )
-ability_type = "Dash"
+ability_type = "Flux"
 
 [node name="ability_pickup3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 532.758, 204.907 )

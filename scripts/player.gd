@@ -58,9 +58,8 @@ func _physics_process(delta):
 	
 	
 	#checks to see if player has the flux ability
-	if PlayerVariables.HasAbility("flux"):
+	if PlayerVariables.HasAbility("Flux"):
 		can_flux = true
-		flux_count = 1
 	else:
 		can_flux = false
 	

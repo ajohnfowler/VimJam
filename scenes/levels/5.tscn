@@ -22,7 +22,7 @@ tile_data = PoolIntArray( -589847, 0, 0, -589846, 0, 1, -589845, 0, 1, -589844, 
 
 [node name="ability_pickup3" parent="." instance=ExtResource( 4 )]
 position = Vector2( -1102.62, 270.423 )
-ability_type = "flux"
+ability_type = "Flux"
 
 [node name="start" type="Position2D" parent="."]
 position = Vector2( -1299.73, 316.988 )
@@ -85,7 +85,8 @@ scale = Vector2( 1.32, 1 )
 texture = ExtResource( 9 )
 
 [node name="spikes21" type="Area2D" parent="."]
-position = Vector2( 955.142, 756.8 )
+position = Vector2( 842.889, 204.443 )
+rotation = 1.57684
 scale = Vector2( 13.0289, 2.53152 )
 script = ExtResource( 10 )
 
@@ -98,7 +99,8 @@ scale = Vector2( 1.32, 1 )
 texture = ExtResource( 9 )
 
 [node name="spikes22" type="Area2D" parent="."]
-position = Vector2( 1202.5, 756.8 )
+position = Vector2( 842.577, 461.022 )
+rotation = 1.57002
 scale = Vector2( 13.0289, 2.53152 )
 script = ExtResource( 10 )
 
