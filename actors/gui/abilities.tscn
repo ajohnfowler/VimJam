@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sprites/Abilities/Flux.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Abilities/Dash.png" type="Texture" id=2]
-[ext_resource path="res://sprites/Abilities/DoubleJump.png" type="Texture" id=3]
-[ext_resource path="res://sprites/Abilities/WallJump.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Abilities/Double Jump.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Abilities/Wall Jump.png" type="Texture" id=4]
 [ext_resource path="res://scripts/gui/abilities.gd" type="Script" id=5]
+[ext_resource path="res://sprites/Panel.png" type="Texture" id=6]
+
+
 
 [node name="abilities" type="Control"]
 anchor_right = 1.0
@@ -15,19 +18,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -144.0
-margin_right = 144.0
-margin_bottom = 80.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+margin_left = -152.0
+margin_top = 32.0
+margin_right = 152.0
+margin_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 96, 96 )
+patch_margin_left = 33
+patch_margin_top = 33
+patch_margin_right = 33
+patch_margin_bottom = 33
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -42,27 +52,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Double Jump" type="TextureRect" parent="Panel/HBoxContainer"]
+[node name="Double Jump" type="TextureRect" parent="NinePatchRect/HBoxContainer"]
 margin_right = 64.0
 margin_bottom = 64.0
 texture = ExtResource( 3 )
 stretch_mode = 4
 
-[node name="Dash" type="TextureRect" parent="Panel/HBoxContainer"]
+[node name="Dash" type="TextureRect" parent="NinePatchRect/HBoxContainer"]
 margin_left = 68.0
 margin_right = 132.0
 margin_bottom = 64.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
-[node name="Wall Jump" type="TextureRect" parent="Panel/HBoxContainer"]
+[node name="Wall Jump" type="TextureRect" parent="NinePatchRect/HBoxContainer"]
 margin_left = 136.0
 margin_right = 200.0
 margin_bottom = 64.0
 texture = ExtResource( 4 )
 stretch_mode = 4
 
-[node name="Flux" type="TextureRect" parent="Panel/HBoxContainer"]
+[node name="Flux" type="TextureRect" parent="NinePatchRect/HBoxContainer"]
 margin_left = 204.0
 margin_right = 268.0
 margin_bottom = 64.0

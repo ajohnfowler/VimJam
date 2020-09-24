@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WallJump.png-b3f38c4dd8a54dde438eafc2a373d26c.stex"
+path="res://.import/Panel.png-ef742f3b56f71a7a74f2fbf170bffe4b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Abilities/WallJump.png"
-dest_files=[ "res://.import/WallJump.png-b3f38c4dd8a54dde438eafc2a373d26c.stex" ]
+source_file="res://sprites/Panel.png"
+dest_files=[ "res://.import/Panel.png-ef742f3b56f71a7a74f2fbf170bffe4b.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

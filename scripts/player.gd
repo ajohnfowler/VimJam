@@ -68,6 +68,7 @@ func _physics_process(delta):
 	
 	# Add jump force when Jump is pressed
 	if Input.is_action_just_pressed("jump") and can_jump:
+		$Jump.play()
 		velocity.y = -jump_force
 		applied_gravity = gravity
 		if wall_detected == true:

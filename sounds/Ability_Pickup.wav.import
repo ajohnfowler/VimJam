@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ability_Pickup.wav-10daea27f4137374c87d08f8eb26e709.sample"
+
+[deps]
+
+source_file="res://sounds/Ability_Pickup.wav"
+dest_files=[ "res://.import/Ability_Pickup.wav-10daea27f4137374c87d08f8eb26e709.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
