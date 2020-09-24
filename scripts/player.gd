@@ -129,6 +129,7 @@ func _on_wall_detection_body_entered(body):
 		applied_gravity = 0
 		velocity.y = 0
 		reset_jump()
+		reset_dash()
 
 func _on_wall_detection_body_exited(body):
 	if body.name != "player":

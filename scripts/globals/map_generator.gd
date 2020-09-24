@@ -42,7 +42,7 @@ func MakeLevelNodes(parent, step_number):
 
 	node.previous_node = parent
 	# For now just cycle through all levels one after another
-	node.level = number_of_steps - step_number + 1 #rand_range(1,2)
+	node.level = 6 #number_of_steps - step_number + 1 #rand_range(1,2)
 	node.has_map = false
 	node.id = map_nodes.size()
 	map_nodes.append(node)
