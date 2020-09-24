@@ -5,7 +5,7 @@
 [ext_resource path="res://tilesets/level.tres" type="TileSet" id=3]
 [ext_resource path="res://actors/gui/level_ui.tscn" type="PackedScene" id=7]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
 [node name="There" type="Node2D"]
@@ -22,12 +22,12 @@ position = Vector2( -512, 320 )
 
 [node name="ui" parent="." instance=ExtResource( 7 )]
 
-[node name="Objective" type="Area2D" parent="."]
-position = Vector2( 704, 256 )
+[node name="Well" type="Area2D" parent="."]
+position = Vector2( 704, 288 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Objective"]
-shape = SubResource( 12 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Well"]
+shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Objective"]
+[node name="Sprite" type="Sprite" parent="Well"]
 texture = ExtResource( 1 )
-[connection signal="body_entered" from="Objective" to="." method="_on_Objective_body_entered"]
+[connection signal="body_entered" from="Well" to="." method="_on_Objective_body_entered"]

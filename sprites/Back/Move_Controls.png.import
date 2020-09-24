@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WallJump.png-b3f38c4dd8a54dde438eafc2a373d26c.stex"
+path="res://.import/Move_Controls.png-51c48557faf721f7aee7fbeb5d16fea2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Abilities/WallJump.png"
-dest_files=[ "res://.import/WallJump.png-b3f38c4dd8a54dde438eafc2a373d26c.stex" ]
+source_file="res://sprites/Back/Move_Controls.png"
+dest_files=[ "res://.import/Move_Controls.png-51c48557faf721f7aee7fbeb5d16fea2.stex" ]
 
 [params]
 

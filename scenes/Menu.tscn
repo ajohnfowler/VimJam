@@ -1,75 +1,95 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Panel.png" type="Texture" id=2]
+[ext_resource path="res://tilesets/level.tres" type="TileSet" id=3]
+[ext_resource path="res://tilesets/scenary.tres" type="TileSet" id=4]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 150.0
-margin_top = 150.0
-margin_right = -150.0
-margin_bottom = -150.0
+margin_left = 713.0
+margin_top = 205.0
+margin_right = -713.0
+margin_bottom = -205.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 135.0
-margin_bottom = 140.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 262132, 0, 0, 262133, 0, 1, 262134, 0, 1, 262135, 0, 1, 262136, 0, 2, 327668, 0, 65536, 327669, 0, 65537, 327670, 0, 65537, 327671, 0, 65537, 327672, 0, 65538, 393204, 0, 65536, 393205, 0, 65537, 393206, 0, 65537, 393207, 0, 65537, 393208, 0, 65540, 393209, 0, 1, 393210, 0, 1, 393211, 0, 2, 458740, 0, 65536, 458741, 0, 65537, 458742, 0, 65537, 458743, 0, 65537, 458744, 0, 65537, 458745, 0, 65537, 458746, 0, 65537, 458747, 0, 65538, 524276, 0, 65536, 524277, 0, 65537, 524278, 0, 65537, 524279, 0, 65537, 524280, 0, 65537, 524281, 0, 65537, 524282, 0, 65537, 524283, 0, 65540, 524284, 0, 1, 524285, 0, 1, 524286, 0, 1, 524287, 0, 1, 458752, 0, 1, 458753, 0, 1, 458754, 0, 1, 458755, 0, 1, 458756, 0, 1, 458757, 0, 1, 458758, 0, 1, 458759, 0, 1, 458760, 0, 1, 458761, 0, 1, 458762, 0, 1, 458763, 0, 1, 458764, 0, 1, 458765, 0, 1, 458766, 0, 1, 458767, 0, 1, 458768, 0, 1, 458769, 0, 1, 458770, 0, 1, 458771, 0, 2, 589812, 0, 65536, 589813, 0, 65537, 589814, 0, 65537, 589815, 0, 65537, 589816, 0, 65537, 589817, 0, 65537, 589818, 0, 65537, 589819, 0, 65537, 589820, 0, 65537, 589821, 0, 65537, 589822, 0, 65537, 589823, 0, 65537, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 65537, 524304, 0, 65537, 524305, 0, 65537, 524306, 0, 65537, 524307, 0, 65538, 655348, 0, 65536, 655349, 0, 65537, 655350, 0, 65537, 655351, 0, 65537, 655352, 0, 65537, 655353, 0, 65537, 655354, 0, 65537, 655355, 0, 65537, 655356, 0, 65537, 655357, 0, 65537, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65537, 589839, 0, 65537, 589840, 0, 65537, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 65538, 720884, 0, 65536, 720885, 0, 65537, 720886, 0, 65537, 720887, 0, 65537, 720888, 0, 65537, 720889, 0, 65537, 720890, 0, 65537, 720891, 0, 65537, 720892, 0, 65537, 720893, 0, 65537, 720894, 0, 65537, 720895, 0, 65537, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65537, 655371, 0, 65537, 655372, 0, 65537, 655373, 0, 65537, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65538, 786420, 0, 65536, 786421, 0, 65537, 786422, 0, 65537, 786423, 0, 65537, 786424, 0, 65537, 786425, 0, 65537, 786426, 0, 65537, 786427, 0, 65537, 786428, 0, 65537, 786429, 0, 65537, 786430, 0, 65537, 786431, 0, 65537, 720896, 0, 65537, 720897, 0, 65537, 720898, 0, 65537, 720899, 0, 65537, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65537, 720907, 0, 65537, 720908, 0, 65537, 720909, 0, 65537, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65538, 851956, 0, 65536, 851957, 0, 65537, 851958, 0, 65537, 851959, 0, 65537, 851960, 0, 65537, 851961, 0, 65537, 851962, 0, 65537, 851963, 0, 65537, 851964, 0, 65537, 851965, 0, 65537, 851966, 0, 65537, 851967, 0, 65537, 786432, 0, 65537, 786433, 0, 65537, 786434, 0, 65537, 786435, 0, 65537, 786436, 0, 65537, 786437, 0, 65537, 786438, 0, 65537, 786439, 0, 65537, 786440, 0, 65537, 786441, 0, 65537, 786442, 0, 65537, 786443, 0, 65537, 786444, 0, 65537, 786445, 0, 65537, 786446, 0, 65537, 786447, 0, 65537, 786448, 0, 65537, 786449, 0, 65537, 786450, 0, 65537, 786451, 0, 65538, 917492, 0, 65536, 917493, 0, 65537, 917494, 0, 65537, 917495, 0, 65537, 917496, 0, 65537, 917497, 0, 65537, 917498, 0, 65537, 917499, 0, 65537, 917500, 0, 65537, 917501, 0, 65537, 917502, 0, 65537, 917503, 0, 65537, 851968, 0, 65537, 851969, 0, 65537, 851970, 0, 65537, 851971, 0, 65537, 851972, 0, 65537, 851973, 0, 65537, 851974, 0, 65537, 851975, 0, 65537, 851976, 0, 65537, 851977, 0, 65537, 851978, 0, 65537, 851979, 0, 65537, 851980, 0, 65537, 851981, 0, 65537, 851982, 0, 65537, 851983, 0, 65537, 851984, 0, 65537, 851985, 0, 65537, 851986, 0, 65537, 851987, 0, 65538, 983028, 0, 131072, 983029, 0, 131073, 983030, 0, 131073, 983031, 0, 131073, 983032, 0, 131073, 983033, 0, 131073, 983034, 0, 131073, 983035, 0, 131073, 983036, 0, 131073, 983037, 0, 131073, 983038, 0, 131073, 983039, 0, 131073, 917504, 0, 131073, 917505, 0, 131073, 917506, 0, 131073, 917507, 0, 131073, 917508, 0, 131073, 917509, 0, 131073, 917510, 0, 131073, 917511, 0, 131073, 917512, 0, 131073, 917513, 0, 131073, 917514, 0, 131073, 917515, 0, 131073, 917516, 0, 131073, 917517, 0, 131073, 917518, 0, 131073, 917519, 0, 131073, 917520, 0, 131073, 917521, 0, 131073, 917522, 0, 131073, 917523, 0, 131074 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 131.0
-margin_bottom = 140.0
-alignment = 1
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+format = 1
+tile_data = PoolIntArray( 65543, 5, 0, 196598, 0, 0, 196599, 0, 0, 196600, 1, 0, 327674, 0, 0, 327675, 1, 0, 262153, 4, 0, 327689, 4, 0, 458749, 3, 0, 393225, 3, 0, 393227, 1, 0, 393228, 0, 0, 393229, 0, 0, 393230, 1, 0, 393233, 2, 0 )
 
-[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
-margin_right = 131.0
-margin_bottom = 14.0
-text = "The Journey to There"
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 494.0
+margin_bottom = 670.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 96, 96 )
+patch_margin_left = 33
+patch_margin_top = 33
+patch_margin_right = 33
+patch_margin_bottom = 33
+
+[node name="Title" type="Label" parent="NinePatchRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -247.0
+margin_top = 63.0
+margin_right = 247.0
+margin_bottom = 77.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Title Goes Here"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="menu_options" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 131.0
-margin_bottom = 88.0
+[node name="menu_options" type="VBoxContainer" parent="NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -171.0
+margin_top = -107.0
+margin_right = 171.0
+margin_bottom = 106.0
 size_flags_vertical = 3
 custom_constants/separation = 30
 
-[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer/menu_options"]
-margin_right = 131.0
+[node name="Play" type="Button" parent="NinePatchRect/menu_options"]
+margin_right = 342.0
 margin_bottom = 20.0
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer/menu_options"]
+[node name="Quit" type="Button" parent="NinePatchRect/menu_options"]
 margin_top = 50.0
-margin_right = 131.0
+margin_right = 342.0
 margin_bottom = 70.0
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Credits" type="Label" parent="HBoxContainer/VBoxContainer"]
-margin_top = 92.0
-margin_right = 131.0
-margin_bottom = 140.0
-text = "Made for VimJam:
-Adam Fowler
-Matthew Bolivar"
-
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
-margin_left = 135.0
-margin_right = 135.0
-margin_bottom = 140.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/menu_options/Play" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/menu_options/Quit" to="." method="_on_Quit_pressed"]
+[node name="Label" type="Label" parent="NinePatchRect"]
+margin_left = 215.454
+margin_top = 347.398
+margin_right = 260.454
+margin_bottom = 361.398
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="NinePatchRect/menu_options/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="NinePatchRect/menu_options/Quit" to="." method="_on_Quit_pressed"]

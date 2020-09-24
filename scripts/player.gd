@@ -17,9 +17,13 @@ var dash_count
 var can_flux = false
 var flux_count
 
+var locked = false
+
 var velocity = Vector2.ZERO
 
 func _physics_process(delta):
+	
+	if locked: return
 	
 	# Left and Right movement
 	var direction = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
@@ -56,7 +60,6 @@ func _physics_process(delta):
 		reset_dash()
 		reset_flux()
 	
-	
 	#checks to see if player has the flux ability
 	if PlayerVariables.HasAbility("Flux"):
 		can_flux = true
@@ -65,6 +68,7 @@ func _physics_process(delta):
 	
 	# Add jump force when Jump is pressed
 	if Input.is_action_just_pressed("jump") and can_jump:
+		$Jump.play()
 		velocity.y = -jump_force
 		applied_gravity = gravity
 		if wall_detected == true:
@@ -94,7 +98,6 @@ func _physics_process(delta):
 			flux_count -= 1
 			$Sprite.set_flip_v(direction > 0)
 
-
 func reset_jump():
 	# If player has double jump, can jump twice
 	if PlayerVariables.HasAbility("Double Jump"):
@@ -112,7 +115,6 @@ func reset_dash():
 	else:
 		pass
 	
-
 func reset_flux():
 	if PlayerVariables.HasAbility("Flux"):
 		flux_count = 1
@@ -133,3 +135,7 @@ func _on_wall_detection_body_exited(body):
 		# Code for wall jump
 		wall_detected = false
 		applied_gravity = gravity
+
+func Lock():
+	locked = true
+	$AnimationPlayer.play("Idle")

@@ -8,6 +8,7 @@ func _ready():
 func _on_MapPiece_body_entered(body):
 	if (body.name == "player"):
 		PlayerVariables.FoundMap()
+		$Sound.play()
 		$Sprite.visible = false
 		$Poof.emitting = true
 		yield(get_tree().create_timer(0.5), "timeout")
