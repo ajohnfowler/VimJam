@@ -78,14 +78,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -130.5
-margin_top = -125.0
-margin_right = 130.5
-margin_bottom = -43.0
+margin_left = -128.0
+margin_top = -144.0
+margin_right = 128.0
+margin_bottom = -62.0
 text = "This game was made in one week for the VimJam game jam.
-Made by: 
+
+Devloped by: 
 - Adam Fowler
-- Matt Boulivar"
+- Matt Bolivar"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
