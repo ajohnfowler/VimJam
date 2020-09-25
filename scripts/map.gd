@@ -19,6 +19,8 @@ func BuildMap():
 			if not node.previous_node.has_map: return
 		var point = map_point.instance()
 		add_child(point)
+		if i < (SceneManager.current_map_node - 1) or i > (SceneManager.current_map_node + 1):
+			point.set_inactive()
 		point.position = node.position
 		point.id = node.id
 		point.get_node("Label").set_text(node.level.capitalize())
