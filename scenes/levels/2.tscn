@@ -8,22 +8,22 @@
 [ext_resource path="res://sprites/Spikes.png" type="Texture" id=9]
 [ext_resource path="res://scripts/spikes.gd" type="Script" id=10]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 288, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 16 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 127, 16 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 160, 16 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 256, 16 )
 
-[node name="3" type="Node2D"]
+[node name="2" type="Node2D"]
 position = Vector2( -78.5723, -388.372 )
 script = ExtResource( 6 )
 level_name = "Test Level 1"
@@ -57,7 +57,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes"]
 margin_left = -286.0
@@ -141,7 +141,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes5"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes5"]
 margin_left = -128.0
@@ -162,7 +162,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes6"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes6"]
 margin_left = -112.0
@@ -183,7 +183,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes9"]
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes9"]
 margin_left = -141.0
@@ -225,7 +225,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes7"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes7"]
 margin_left = -112.0

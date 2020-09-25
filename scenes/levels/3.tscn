@@ -8,19 +8,19 @@
 [ext_resource path="res://sprites/Spikes.png" type="Texture" id=9]
 [ext_resource path="res://scripts/spikes.gd" type="Script" id=10]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 192, 16 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 128, 16 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 608, 16 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 64, 16 )
 
-[node name="1" type="Node2D"]
+[node name="3" type="Node2D"]
 script = ExtResource( 6 )
 level_name = "Test Level 1"
 
@@ -54,7 +54,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes"]
 anchor_left = 0.5
@@ -79,7 +79,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes7"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes7"]
 anchor_left = 0.5
@@ -104,7 +104,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes8"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes8"]
 anchor_left = 0.5
@@ -129,7 +129,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes9"]
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes9"]
 anchor_left = 0.5
@@ -154,7 +154,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes10"]
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes10"]
 anchor_left = 0.5
@@ -180,7 +180,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes2"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes2"]
 anchor_left = 0.5
@@ -206,7 +206,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes3"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes3"]
 anchor_left = 0.5
@@ -232,7 +232,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes4"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes4"]
 anchor_left = 0.5
@@ -258,7 +258,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes6"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes6"]
 anchor_left = 0.5
@@ -284,7 +284,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes5"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="TextureRect" type="TextureRect" parent="Spikes/spikes5"]
 anchor_left = 0.5
