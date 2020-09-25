@@ -125,6 +125,7 @@ config/icon="res://sprites/icon.png"
 SceneManager="*res://scripts/globals/scene_manager.gd"
 PlayerVariables="*res://scripts/globals/player_variables.gd"
 MapGenerator="*res://scripts/globals/map_generator.gd"
+GameMusic="*res://scenes/globals/GameMusic.tscn"
 
 [display]
 
