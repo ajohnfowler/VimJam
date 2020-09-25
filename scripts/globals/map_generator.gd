@@ -29,7 +29,7 @@ func MakeBack():
 	var back = MapNode.new()
 	back.position = Vector2.ZERO
 	back.level = "back"
-	back.has_map = true#false
+	back.has_map = false
 	back.id = map_nodes.size()
 	map_nodes.append(back)
 
@@ -43,7 +43,7 @@ func MakeLevelNodes(parent, step_number):
 	node.previous_node = parent
 	# For now just cycle through all levels one after another
 	node.level = number_of_steps - step_number + 1 #rand_range(1,2)
-	node.has_map = true#false
+	node.has_map = false
 	node.id = map_nodes.size()
 	map_nodes.append(node)
 	

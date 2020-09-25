@@ -7,8 +7,6 @@
 [ext_resource path="res://scripts/gui/abilities.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Panel.png" type="Texture" id=6]
 
-
-
 [node name="abilities" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,9 +20,9 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -152.0
-margin_top = 32.0
+margin_top = 40.0
 margin_right = 152.0
-margin_bottom = 128.0
+margin_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource( 6 )
@@ -65,6 +63,22 @@ margin_bottom = 64.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 
+[node name="Label" type="Label" parent="NinePatchRect/HBoxContainer/Dash"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -46.0
+margin_top = -10.0
+margin_right = -6.0
+margin_bottom = 4.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Shift"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Wall Jump" type="TextureRect" parent="NinePatchRect/HBoxContainer"]
 margin_left = 136.0
 margin_right = 200.0
@@ -78,3 +92,19 @@ margin_right = 268.0
 margin_bottom = 64.0
 texture = ExtResource( 1 )
 stretch_mode = 4
+
+[node name="Label2" type="Label" parent="NinePatchRect/HBoxContainer/Flux"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -43.0
+margin_top = -11.0
+margin_right = -3.0
+margin_bottom = 3.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Q"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

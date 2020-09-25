@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/Back/Jump_Controls.png" type="Texture" id=1]
 [ext_resource path="res://actors/map_pickup.tscn" type="PackedScene" id=2]
@@ -16,9 +16,10 @@
 [ext_resource path="res://sprites/Fountain_Off.png" type="Texture" id=14]
 [ext_resource path="res://sprites/Fountain_On.png" type="Texture" id=15]
 [ext_resource path="res://scripts/fountain.gd" type="Script" id=16]
+[ext_resource path="res://actors/gui/win_screen.tscn" type="PackedScene" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 18, 18 )
+extents = Vector2( 64, 64 )
 
 [node name="Back" type="Node2D"]
 script = ExtResource( 6 )
@@ -135,23 +136,35 @@ texture = ExtResource( 9 )
 
 [node name="Fountain" type="Node2D" parent="."]
 position = Vector2( 1432, 192 )
-scale = Vector2( 4, 4 )
 script = ExtResource( 16 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Fountain_On" type="Sprite" parent="Fountain"]
 visible = false
+scale = Vector2( 4, 4 )
 texture = ExtResource( 15 )
 
 [node name="Fountain_Off" type="Sprite" parent="Fountain"]
+scale = Vector2( 4, 4 )
 texture = ExtResource( 14 )
 
 [node name="Area2D" type="Area2D" parent="Fountain"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fountain/Area2D"]
 shape = SubResource( 1 )
+
+[node name="Prompt" type="Label" parent="Fountain"]
+visible = false
+margin_left = -152.0
+margin_top = -160.0
+margin_right = 168.0
+margin_bottom = -40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- Oh No, There is no water. The village mayor has asked me to ventrue to the next village of There to get some from their well. However, the village map was torn up in the last storm and blew away. Maybe I can find some pieces on my way."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -166,6 +179,9 @@ position = Vector2( 3200, 192 )
 
 [node name="ui" parent="." instance=ExtResource( 7 )]
 
+[node name="win_screen" parent="ui" instance=ExtResource( 17 )]
+visible = false
+
 [node name="map_pickup" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2752, 168 )
 
@@ -179,3 +195,4 @@ position = Vector2( 40, 192 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 [connection signal="body_entered" from="Fountain/Area2D" to="Fountain" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Fountain/Area2D" to="Fountain" method="_on_Area2D_body_exited"]
