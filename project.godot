@@ -118,7 +118,8 @@ _global_script_class_icons={
 
 config/name="VimJam"
 run/main_scene="res://scenes/Menu.tscn"
-config/icon="res://sprites/icon.png"
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
