@@ -8,7 +8,7 @@ var position_total = Vector2.ZERO
 func _ready():
 	BuildMap()
 	PositionCamera()
-	PositionBackground()
+	PositionIndicator()
 
 func BuildMap():
 	position_total = Vector2.ZERO
@@ -33,8 +33,8 @@ func PositionCamera():
 	var central_position = position_total/(MapGenerator.map_nodes.size())
 	$focus_point.position = central_position
 
-func PositionBackground():
-	pass
+func PositionIndicator():
+	$MapIndicator.position = MapGenerator.map_nodes[SceneManager.current_map_node].position
 
 func _on_Button_pressed():
 	SceneManager.goto_scene("res://scenes/Game.tscn")

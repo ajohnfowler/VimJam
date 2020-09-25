@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://sprites/Back/Jump_Controls.png" type="Texture" id=1]
 [ext_resource path="res://actors/map_pickup.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://sprites/Houses/Window.png" type="Texture" id=11]
 [ext_resource path="res://sprites/Houses/Building2.png" type="Texture" id=12]
 [ext_resource path="res://sprites/Houses/Roof2.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Fountain_Off.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Fountain_On.png" type="Texture" id=15]
 
 [node name="Back" type="Node2D"]
 script = ExtResource( 6 )
@@ -126,6 +128,20 @@ offset = Vector2( -4, -4 )
 [node name="Door" type="Sprite" parent="Village/Building3"]
 position = Vector2( -96, 48 )
 texture = ExtResource( 9 )
+
+[node name="Foundtain" type="Node2D" parent="."]
+position = Vector2( 1432, 192 )
+scale = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Fountain_On" type="Sprite" parent="Foundtain"]
+visible = false
+texture = ExtResource( 15 )
+
+[node name="Fountain_Off" type="Sprite" parent="Foundtain"]
+texture = ExtResource( 14 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )

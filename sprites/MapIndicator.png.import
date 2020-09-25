@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Spikes.png-74291f56ae13d23045f77f35df84afea.stex"
+path="res://.import/MapIndicator.png-65bc98e7e6ed7aa566ee26f267e102d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Spikes.png"
-dest_files=[ "res://.import/Spikes.png-74291f56ae13d23045f77f35df84afea.stex" ]
+source_file="res://sprites/MapIndicator.png"
+dest_files=[ "res://.import/MapIndicator.png-65bc98e7e6ed7aa566ee26f267e102d1.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=1
+flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

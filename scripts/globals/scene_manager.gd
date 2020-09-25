@@ -8,6 +8,7 @@ var current_map_node
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+	current_map_node = 0
 
 func goto_level(name, map_node):
 	var path = "res://scenes/levels/"+str(name)+".tscn"

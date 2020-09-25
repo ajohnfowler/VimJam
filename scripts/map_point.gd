@@ -2,6 +2,7 @@ extends Area2D
 class_name map_tile
 
 var id
+var active = true
 
 func _on_map_tile_input_event(_viewport, event, _shape_idx):
 	# Called when the mouse is released over the map tile.
@@ -11,7 +12,8 @@ func _on_map_tile_input_event(_viewport, event, _shape_idx):
 
 # On mouse enter highlight
 func _on_map_tile_mouse_entered():
-	$Sprite.self_modulate = Color(0,1,0)
+	if active:
+		$Sprite.self_modulate = Color(0,1,0)
 
 # On mouse exit remove highlight
 func _on_map_tile_mouse_exited():
