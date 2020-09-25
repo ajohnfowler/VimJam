@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=9 format=2]
-=======
-[gd_scene load_steps=14 format=2]
->>>>>>> Stashed changes
 
 [ext_resource path="res://tilesets/level.tres" type="TileSet" id=1]
 [ext_resource path="res://actors/map_pickup.tscn" type="PackedScene" id=2]
@@ -12,28 +8,8 @@
 [ext_resource path="res://sprites/Spikes.png" type="Texture" id=9]
 [ext_resource path="res://scripts/spikes.gd" type="Script" id=10]
 
-<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
-=======
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 176, 16 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 64, 16 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 224, 16 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 32, 16 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 16, 16 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 1120, 16 )
->>>>>>> Stashed changes
 
 [node name="1" type="Node2D"]
 script = ExtResource( 6 )
@@ -60,16 +36,11 @@ position = Vector2( 1384.38, -1153.96 )
 
 [node name="ui" parent="." instance=ExtResource( 7 )]
 
-<<<<<<< Updated upstream
 [node name="spikes" type="Area2D" parent="."]
 position = Vector2( -584, 258.57 )
 rotation = -1.57079
 scale = Vector2( 7.55657, 2.00694 )
 script = ExtResource( 10 )
-=======
-[node name="map_pickup" parent="." instance=ExtResource( 2 )]
-position = Vector2( 386.823, -427.311 )
->>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes"]
 scale = Vector2( 1.14416, 1 )
@@ -79,7 +50,6 @@ shape = SubResource( 1 )
 scale = Vector2( 1.32, 1 )
 texture = ExtResource( 9 )
 
-<<<<<<< Updated upstream
 [node name="spikes2" type="Area2D" parent="."]
 position = Vector2( -890, 44.5696 )
 rotation = -4.71238
@@ -120,179 +90,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes6"]
 scale = Vector2( 1.32, 1 )
-=======
-[node name="spikes" type="Area2D" parent="Spikes"]
-position = Vector2( -1264, -80 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes"]
-shape = SubResource( 4 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes"]
-margin_left = -176.0
-margin_top = -16.0
-margin_right = 176.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes2" type="Area2D" parent="Spikes"]
-position = Vector2( -496, -272 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes2"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes2"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes13" type="Area2D" parent="Spikes"]
-position = Vector2( -592, -176 )
-rotation = -1.5708
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes13"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes13"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes14" type="Area2D" parent="Spikes"]
-position = Vector2( -592, 256 )
-rotation = -1.5708
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes14"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes14"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes15" type="Area2D" parent="Spikes"]
-position = Vector2( -880, 40 )
-rotation = 1.5708
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes15"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes15"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes16" type="Area2D" parent="Spikes"]
-position = Vector2( 336, -192 )
-rotation = 1.5708
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes16"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes16"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes17" type="Area2D" parent="Spikes"]
-position = Vector2( 848, -240 )
-rotation = 1.5708
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes17"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes17"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes12" type="Area2D" parent="Spikes"]
-position = Vector2( -504, -496 )
-rotation = 3.14159
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes12"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes12"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
->>>>>>> Stashed changes
 texture = ExtResource( 9 )
 
-<<<<<<< Updated upstream
 [node name="spikes15" type="Area2D" parent="."]
 position = Vector2( 606.872, 119.136 )
 rotation = -6.28318
@@ -305,26 +104,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="spikes15"]
 scale = Vector2( 1.32, 1 )
-=======
-[node name="spikes3" type="Area2D" parent="Spikes"]
-position = Vector2( -144, -272 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes3"]
-shape = SubResource( 2 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes3"]
-margin_left = -64.0
-margin_top = -16.0
-margin_right = 64.0
-margin_bottom = 16.0
->>>>>>> Stashed changes
 texture = ExtResource( 9 )
 
-<<<<<<< Updated upstream
 [node name="spikes16" type="Area2D" parent="."]
 position = Vector2( 801, -323.355 )
 rotation = -6.28318
@@ -620,190 +401,3 @@ position = Vector2( 386.823, -427.311 )
 [connection signal="body_entered" from="spikes25" to="spikes25" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes4" to="spikes4" method="_on_spikes_body_entered"]
 [connection signal="body_entered" from="spikes5" to="spikes5" method="_on_spikes_body_entered"]
-=======
-[node name="spikes4" type="Area2D" parent="Spikes"]
-position = Vector2( -32, 112 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes4"]
-shape = SubResource( 5 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes4"]
-margin_left = -205.0
-margin_top = -16.0
-margin_right = 211.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes5" type="Area2D" parent="Spikes"]
-position = Vector2( 608, 112 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes5"]
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes5"]
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes11" type="Area2D" parent="Spikes"]
-position = Vector2( -880, -184 )
-rotation = 1.5708
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes11"]
-shape = SubResource( 7 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes11"]
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes7" type="Area2D" parent="Spikes"]
-position = Vector2( 800, -336 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes7"]
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes7"]
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes8" type="Area2D" parent="Spikes"]
-position = Vector2( 1952, -528 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes8"]
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes8"]
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes9" type="Area2D" parent="Spikes"]
-position = Vector2( 1440, -720 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes9"]
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes9"]
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes10" type="Area2D" parent="Spikes"]
-position = Vector2( 1952, -976 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes10"]
-shape = SubResource( 3 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes10"]
-margin_left = -16.0
-margin_top = -16.0
-margin_right = 16.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="spikes6" type="Area2D" parent="Spikes"]
-position = Vector2( 1440, 496 )
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/spikes6"]
-shape = SubResource( 6 )
-
-[node name="TextureRect" type="TextureRect" parent="Spikes/spikes6"]
-margin_left = -1120.0
-margin_top = -16.0
-margin_right = 1120.0
-margin_bottom = 16.0
-texture = ExtResource( 9 )
-stretch_mode = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="body_entered" from="Spikes/spikes" to="Spikes/spikes" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes2" to="Spikes/spikes2" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes13" to="Spikes/spikes13" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes14" to="Spikes/spikes14" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes15" to="Spikes/spikes15" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes16" to="Spikes/spikes16" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes17" to="Spikes/spikes17" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes12" to="Spikes/spikes12" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes3" to="Spikes/spikes3" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes4" to="Spikes/spikes4" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes5" to="Spikes/spikes5" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes11" to="Spikes/spikes11" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes7" to="Spikes/spikes7" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes8" to="Spikes/spikes8" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes9" to="Spikes/spikes9" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes10" to="Spikes/spikes10" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="Spikes/spikes6" to="Spikes/spikes6" method="_on_spikes_body_entered"]
->>>>>>> Stashed changes
